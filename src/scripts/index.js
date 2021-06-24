@@ -4,4 +4,15 @@ import '../styles/main.scss';
 
 
 // \/ All of your javascript should go here \/
+console.log('test');
 
+setTimeout(() => {
+    const modal = document.getElementById("myModal");
+    modal.style.display = "block";
+}, 60000);
+
+const close = document.querySelector("span.close");
+
+close.addEventListener("click", () => {
+    document.getElementById("myModal").style.display = "none";
+});
