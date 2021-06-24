@@ -4,12 +4,16 @@ import '../styles/main.scss';
 
 
 // \/ All of your javascript should go here \/
-console.log('test');
+const p = new Promise((resolve) => {
+    setTimeout(() => {
+        resolve("resolved");
+    }, 60000);
+});
 
-setTimeout(() => {
+p.finally(() => {
     const modal = document.getElementById("myModal");
     modal.style.display = "block";
-}, 60000);
+})
 
 const close = document.querySelector("span.close");
 
